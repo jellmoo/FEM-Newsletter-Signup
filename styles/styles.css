@@ -80,7 +80,7 @@ body {
   }
 }
 .newsletter__image {
-  background-image: url("../images/illustration-sign-up-mobile.svg");
+  background-image: url("https://jellmoo.github.io/fem-newsletter-signup/images/illustration-sign-up-mobile.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -91,14 +91,14 @@ body {
 }
 @media (min-width: 600px) {
   .newsletter__image {
-    background-image: url("../images/illustration-sign-up-tablet.svg");
+    background-image: url("https://jellmoo.github.io/fem-newsletter-signup/images/illustration-sign-up-tablet.svg");
     min-height: 358px;
     border-radius: 1rem;
   }
 }
 @media (min-width: 1024px) {
   .newsletter__image {
-    background-image: url("../images/illustration-sign-up-desktop.svg");
+    background-image: url("https://jellmoo.github.io/fem-newsletter-signup/images/illustration-sign-up-desktop.svg");
     max-width: 400px;
   }
 }
