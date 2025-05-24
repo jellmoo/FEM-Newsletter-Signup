@@ -39,7 +39,7 @@ body {
     }
 
     &__image {
-        background-image: url('./images/illustration-sign-up-mobile.svg');
+        background-image: url('../images/illustration-sign-up-mobile.svg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -49,13 +49,13 @@ body {
         border-bottom-right-radius: $spacing-200;
 
         @include tablet {
-            background-image: url('./images/illustration-sign-up-tablet.svg');
+            background-image: url('../images/illustration-sign-up-tablet.svg');
             min-height: 358px;
             border-radius: $spacing-200;
         }
 
         @include desktop {
-            background-image: url('./images/illustration-sign-up-desktop.svg');
+            background-image: url('../images/illustration-sign-up-desktop.svg');
             max-width: 400px;
         }
     }
