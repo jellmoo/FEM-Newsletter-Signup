@@ -1,0 +1,30 @@
+// Colors
+$white: rgba(255, 255, 255);
+$grey: rgba(148, 148, 148);
+$blue-800: rgba(36, 39, 66);
+$blue-700: rgba(54, 56, 77);
+$red: rgba(255, 97, 85);
+
+$gradient: linear-gradient(90deg, rgba(255, 106, 58), rgba(255, 82, 123));
+$drop-shadow: 0px 16px 32px rgba(255, 106, 58, 0.5);
+$drop-shadow-2: 0px 15px 60px rgba(0, 0, 0, .25);
+
+// Spacing
+$spacing-100: 0.5rem; //8px
+$spacing-200: 1rem; //16px
+$spacing-300: 1.5rem; //24px
+$spacing-400: 2rem; //32px
+$spacing-500: 2.5rem; //40px
+$spacing-600: 3rem; //48px
+$spacing-700: 4rem; //64px
+$spacing-800: 4.5rem; //72px
+$spacing-900: 6.5rem; //104px
+
+// Media
+@mixin tablet {
+    @media (min-width: 600px) { @content; }
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) { @content; }
+}

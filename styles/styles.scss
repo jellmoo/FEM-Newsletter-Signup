@@ -1,0 +1,262 @@
+@import './reset';
+@import './typography';
+@import './variables';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    @include tablet {
+        margin: 80px;
+        background: $blue-700; 
+    }
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: $white; 
+
+    @include tablet {
+        
+        max-width: 608px;
+        max-height: 878px;
+        border-radius: 36px;
+        padding: $spacing-500;
+        box-shadow: $drop-shadow-2;
+    }
+
+    @include desktop {
+        flex-direction: row-reverse;
+        min-width: 904px;
+        max-height: 641px;
+        padding: $spacing-400;
+    }
+
+    &__image {
+        background-image: url('./images/illustration-sign-up-mobile.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 284px;
+        border-bottom-left-radius: $spacing-200;
+        border-bottom-right-radius: $spacing-200;
+
+        @include tablet {
+            background-image: url('./images/illustration-sign-up-tablet.svg');
+            min-height: 358px;
+            border-radius: $spacing-200;
+        }
+
+        @include desktop {
+            background-image: url('./images/illustration-sign-up-desktop.svg');
+            max-width: 400px;
+        }
+    }
+
+    &__container {
+        padding: $spacing-500 $spacing-300;
+        color: $blue-800;
+        
+        @include tablet {
+            padding: 0;
+            margin-top: $spacing-500;
+        }
+
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 0;
+        }
+    }
+
+    &__info {
+        margin-bottom: $spacing-500;
+
+        @include tablet {
+            margin-bottom: $spacing-300;
+        }
+
+        @include desktop {
+            margin-bottom: $spacing-400;
+        }
+    }
+
+    &__title {
+        margin-bottom: $spacing-300;
+
+        @include desktop {
+            margin-bottom: $spacing-400;
+        }
+    }
+
+    &__description {
+        margin-bottom: $spacing-300;
+
+        @include desktop {
+            margin-bottom: $spacing-400;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: $spacing-100;
+    }
+
+    &__list-icon {
+        margin-right: 1rem;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+
+    &__list-item--text {
+        text-wrap: wrap;
+        max-width: 290px;
+
+        @include tablet {
+            max-width: 339px;
+        }
+    }
+
+    &__form {
+
+        @include desktop {
+            max-width:  376px;
+        }
+    }
+
+    &__form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        @include text-preset-3;
+        margin-bottom: $spacing-100;
+    }
+
+    &__input {
+        width: 100%;
+        min-height: 56px;
+        border-radius: $spacing-100;
+        border: 1px solid $grey;
+        padding: $spacing-200 $spacing-300;
+        margin-bottom: $spacing-300;
+
+        @include tablet {
+            margin-bottom: $spacing-200;
+        }
+    }
+}
+
+.btn {
+    background: $blue-800;
+    color: $white;
+    display: block;
+    width: 100%;
+    padding: $spacing-200 $spacing-600;
+    @include text-preset-2-bold;
+    color: #fff;
+    border: none;
+    border-radius: $spacing-100;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 1s ease-in;
+}
+
+.btn:hover, .btn:active {
+    background: $gradient;
+    box-shadow: $drop-shadow;
+}
+
+.error {
+    border: 1px solid $red !important;
+    background: rgba(255, 97, 85, 0.05);
+}
+
+.error-message {
+    color: $red;
+    @include text-preset-3;
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+}
+
+.error-visible {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.heading-primary {
+    @include text-preset-1-mobile;
+
+    @include tablet {
+        @include text-preset-1;
+    }
+}
+
+.text-regular {
+    @include text-preset-2-regular;
+}
+
+// Success Page
+
+.success { // move success items to __content
+    color: $blue-800;
+    margin: $spacing-300;
+    min-height: 623px;
+
+    @include tablet {
+        max-width: 504px;
+        min-height: 520px;
+        justify-content: center;
+        background: $white;
+        border-radius: 36px;
+        padding: $spacing-700;
+        margin: 0;
+        box-shadow: $drop-shadow-2;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    &__icon {
+        margin-bottom: $spacing-400;
+        width: 64px;
+        height: 64px;
+    }
+
+    &__title {
+        margin-bottom: $spacing-400;
+    }
+
+    &__description {
+        max-width: 350px;
+        text-wrap: wrap;
+        margin-bottom: 263px;
+
+        @include tablet {
+            max-width: 376px;
+            margin-bottom: $spacing-400;
+        }
+    }
+}
